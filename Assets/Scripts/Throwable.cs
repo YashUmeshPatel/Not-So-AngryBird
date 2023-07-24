@@ -4,6 +4,8 @@ public class Throwable : MonoBehaviour
 {
     public Rigidbody2D _rigidbody;
 
+    public static bool isDragable;
+
     void Throw()
     {
 
@@ -17,5 +19,15 @@ public class Throwable : MonoBehaviour
     void ApplyAbility()
     {
 
+    }
+
+    private void OnMouseEnter()
+    {
+        isDragable = true;
+    }
+
+    private void OnMouseExit()
+    {
+        isDragable = false;
     }
 }

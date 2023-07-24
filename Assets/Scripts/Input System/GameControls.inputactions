@@ -1,0 +1,56 @@
+{
+    "name": "GameControls",
+    "maps": [
+        {
+            "name": "Throwable",
+            "id": "f51c7c52-eb00-46b0-ab9c-63ad810670cb",
+            "actions": [
+                {
+                    "name": "Pull",
+                    "type": "Value",
+                    "id": "cb28a284-f3ee-492a-bd08-2c9baed795ae",
+                    "expectedControlType": "Vector2",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": true
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "One Modifier",
+                    "id": "728aef69-56ad-42a1-bc78-66bb2470e3db",
+                    "path": "OneModifier",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Pull",
+                    "isComposite": true,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "modifier",
+                    "id": "7ff5fc5c-424b-4098-9d49-3a1747d5b80a",
+                    "path": "<Mouse>/leftButton",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Pull",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "binding",
+                    "id": "321a18ee-5714-4a8e-9262-bf0188f3aafd",
+                    "path": "<Mouse>/position",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Pull",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                }
+            ]
+        }
+    ],
+    "controlSchemes": []
+}

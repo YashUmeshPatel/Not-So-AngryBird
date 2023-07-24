@@ -3,31 +3,37 @@ using UnityEngine;
 
 public class Thrower : MonoBehaviour
 {
-    [SerializeField] Throwable _throwable;
-    
+    [SerializeField] Throwable throwable;    
+
     private void OnEnable()
     {
         InputController.OnDragEvent += Pull;
-        InputController.OnDragEvent += Throw;
+        InputController.OnReleaseEvent += Throw;        
     }    
 
     private void Throw()
     {
-        
+            
     }
 
-    private void Pull()
+    private void Pull(Vector2 position)
     {
-        _throwable.transform.position = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+        if (Throwable.isDragable)
+        {
+            Debug.Log("Pulling Throwable: " + Camera.main.ScreenToWorldPoint(position));
+            throwable.transform.position = new Vector3(Camera.main.ScreenToWorldPoint(position).x, Camera.main.ScreenToWorldPoint(position).y, 0);
+        }
     }
 
     private void Load()
     {
-
+        
     }
 
     private void Movement()
     {
-
+        
     }
+
+       
 }
